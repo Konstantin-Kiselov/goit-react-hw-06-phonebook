@@ -5,8 +5,9 @@ import Section from './Section/Section';
 import ContactList from './ContactList/ContactList';
 import Form from './Form/Form';
 import Filter from './Filter/Filter';
+import { connect } from 'react-redux';
 
-export default function App() {
+function App({ store }) {
   const [contacts, setContacts] = useState([
     { id: 'id-1', name: 'Rosie Simpson', number: '459-12-56' },
     { id: 'id-2', name: 'Hermione Kline', number: '443-89-12' },
@@ -14,6 +15,12 @@ export default function App() {
     { id: 'id-4', name: 'Annie Copeland', number: '227-91-26' },
   ]);
   const [filter, setFilter] = useState('');
+
+  const mapStateToProps = state => {
+    return store;
+  };
+
+  export default connect(mapStateToProps)(App);
 
   useEffect(() => {
     const contactsLocalStor = localStorage.getItem('contacts');
