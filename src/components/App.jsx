@@ -6,19 +6,6 @@ import Form from './Form/Form';
 import Filter from './Filter/Filter';
 
 export default function App() {
-  // useEffect(() => {
-  //   const contactsLocalStor = localStorage.getItem('contacts');
-  //   const parsedContacts = JSON.parse(contactsLocalStor);
-
-  //   if (parsedContacts) {
-  //     setContacts(parsedContacts);
-  //   }
-  // }, []);
-
-  // useEffect(() => {
-  //   localStorage.setItem('contacts', JSON.stringify(contacts));
-  // }, [contacts]);
-
   return (
     <Container>
       <Section title="Phonebook">
@@ -31,6 +18,19 @@ export default function App() {
     </Container>
   );
 }
+
+// useEffect(() => {
+//   const contactsLocalStor = localStorage.getItem('contacts');
+//   const parsedContacts = JSON.parse(contactsLocalStor);
+
+//   if (parsedContacts) {
+//     setContacts(parsedContacts);
+//   }
+// }, []);
+
+// useEffect(() => {
+//   localStorage.setItem('contacts', JSON.stringify(contacts));
+// }, [contacts]);
 
 // const [contacts, setContacts] = useState([
 // { id: 'id-1', name: 'Rosie Simpson', number: '459-12-56' },
